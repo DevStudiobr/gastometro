@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastômetro - Candidatos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gastômetro Eleitoral</h1>
+        <p>Acompanhe os gastos de campanha dos candidatos.</p>
+    </header>
+
+    <nav>
+        <label for="filter">Filtrar por Partido:</label>
+        <select id="filter">
+            <option value="all">Todos</option>
+            <option value="PSD">PSD</option>
+            <option value="PP">PP</option>
+        </select>
+    </nav>
+
+    <section id="dados-candidatos">
+        <h2>Dados Financeiros dos Candidatos</h2>
+        
+        <div class="candidato" data-party="PSD">
+            <img src="zezo-aragao.jpg" alt="Zezo Aragão" class="foto-candidato">
+            <div class="info-candidato">
+                <h3>Zezo Aragão</h3>
+                <p><strong>Partido:</strong> PSD</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Gasto Total</td>
+                            <td>R$ 141.036,90</td>
+                        </tr>
+                        <tr>
+                            <td>Limite de Gastos</td>
+                            <td>R$ 150.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Doação de Pessoas Físicas</td>
+                            <td>R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Doação de Partidos</td>
+                            <td>R$ 100,00</td>
+                        </tr>
+                        <tr>
+                            <td>Total de Despesas</td>
+                            <td>R$ 141.036,90</td>
+                        </tr>
+                        <tr>
+                            <td>Gastos com Terceiros</td>
+                            <td>37%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="candidato" data-party="PP">
+            <img src="romuld.jpg" alt="Romuld" class="foto-candidato">
+            <div class="info-candidato">
+                <h3>Romuld</h3>
+                <p><strong>Partido:</strong> PP (Partido Progressista)</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Gasto Total</td>
+                            <td>R$ 51.120,00</td>
+                        </tr>
+                        <tr>
+                            <td>Limite de Gastos</td>
+                            <td>R$ 40.400,00</td>
+                        </tr>
+                        <tr>
+                            <td>Doação de Pessoas Físicas</td>
+                            <td>R$ 12.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Doação de Partidos</td>
+                            <td>R$ 39.120,00</td>
+                        </tr>
+                        <tr>
+                            <td>Total de Despesas</td>
+                            <td>R$ 40.400,00</td>
+                        </tr>
+                        <tr>
+                            <td>Gastos Consigo Mesmo</td>
+                            <td>23%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="analises">
+        <h2>Análises sobre os Gastos</h2>
+        <p>Os dados mostram que Zezo Aragão gastou significativamente mais do que o limite estabelecido, enquanto Romuld teve um gasto que ultrapassou seu limite de despesas. Isso pode impactar a percepção dos eleitores sobre a transparência e responsabilidade financeira de cada candidato.</p>
+    </section>
+
+    <section id="grafico">
+        <h2>Comparação de Gastos Totais</h2>
+        <canvas id="gastosChart"></canvas>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
